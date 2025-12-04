@@ -13,9 +13,9 @@
 #include <mutex>
 #include <queue>
 
-#include "lio_sam/gpsTools.hpp"
+#include "gpsTools.hpp"
 #include <rclcpp/rclcpp.hpp>
-#include "lio_sam/utility.hpp"
+#include "utility.hpp"
 
 class GNSSOdom : public ParamServer {
  public:
