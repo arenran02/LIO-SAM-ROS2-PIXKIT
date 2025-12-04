@@ -23,7 +23,7 @@ class GNSSOdom : public ParamServer {
   {
     gpsSub = create_subscription<sensor_msgs::msg::NavSatFix>(
         gpsTopic, qos, std::bind(&GNSSOdom::GNSSCB, this, std::placeholders::_1));
-    gpsOdomPub = create_publisher<nav_msgs::msg::Odometry>("/gps_odom", 100);
+    gpsOdomPub = create_publisher<nav_msgs::msg::Odometry>(gpsOdomTopic, 100);
     fusedPathPub = create_publisher<nav_msgs::msg::Path>("/gps_path", 100);
   }
 
